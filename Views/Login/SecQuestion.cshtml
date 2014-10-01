@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "SecQuestion";
+}
+
+<h2>SecQuestion</h2>
+@using LoginForm.Models;
+
+    
+    @{
+    Database1Entities cx = new Database1Entities();
+    Login log = cx.Logins.Find(1);
+    }
+
+ 
+<body>   
+    <form action="~/Login/validate/@log.Id" method="post">
+      
+        <input type="text" name="secQues" id="sec" value="@log.SecQuestion" />
+        <input type="text" name="ans" placeholder="Answer" />
+        <input type="submit" value="Verify" />
+    </form>
+    
+</body>

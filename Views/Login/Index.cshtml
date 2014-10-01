@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+@using LoginForm.Models;
+
+<h2>Index</h2>
+<body>
+    <form action="~/Login/verify/@TempData["id"]" method="post">
+        <input type="text" placeholder="Username" required="required" name="us" />
+        <input type="password" placeholder="Password" required="required" name="pass" />
+        <input type="submit" value="Login" />
+    </form>
+
+</body>
